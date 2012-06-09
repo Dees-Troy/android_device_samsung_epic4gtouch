@@ -3,8 +3,10 @@ on early-init
 
 on init
     export PATH /sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
+    export LD_LIBRARY_PATH /sbin
     export ANDROID_ROOT /system
     export ANDROID_DATA /data
+    export PHONE_STORAGE /emmc
     export EXTERNAL_STORAGE /sdcard
 
     #symlink /system/etc /etc
@@ -16,6 +18,7 @@ on init
     mkdir /cache
     mkdir /preload
     mkdir /efs
+    mkdir /emmc
     mkdir /tmp
     mkdir /mnt 0775 root root
 	mount /tmp /tmp tmpfs   
