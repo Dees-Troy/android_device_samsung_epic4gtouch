@@ -139,11 +139,8 @@ TARGET_OTA_ASSERT_DEVICE := epic4gtouch,GT-I9100,GT-I9100M,GT-I9100T,SPH-D710
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/epic4gtouch/BoardConfigVendor.mk
 
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/c1-common/shbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/epic4gtouch/shbootimg.mk
 
-
-# Include c1 specific stuff
--include device/samsung/c1-common/Android.mk
 #twrp
 DEVICE_RESOLUTION := 480x800
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
