@@ -47,8 +47,7 @@ TARGET_PROVIDES_INIT := true
 TARGET_PROVIDES_INIT_TARGET_RC := true
 TARGET_RECOVERY_INITRC := device/samsung/epic4gtouch/recovery.rc
 
-BOARD_NAND_PAGE_SIZE := 4096
-BOARD_NAND_SPARE_SIZE := 128
+BOARD_NAND_PAGE_SIZE := 4096 -s 128
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_CMDLINE := console=ttySAC2,115200 consoleblank=0
@@ -141,6 +140,8 @@ TARGET_OTA_ASSERT_DEVICE := epic4gtouch,GT-I9100,GT-I9100M,GT-I9100T,SPH-D710
 -include vendor/samsung/epic4gtouch/BoardConfigVendor.mk
 
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/c1-common/shbootimg.mk
+
+
 # Include c1 specific stuff
 -include device/samsung/c1-common/Android.mk
 #twrp
